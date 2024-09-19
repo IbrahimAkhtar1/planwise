@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="student.css">
+    <title>PlanWise | Student Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="Logo1.png" alt="Logo" class="logo-img">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <li><a href="#" class="link">Contact</a></li>
+                    <li><a href="#" class="link">Services</a></li>
+                    <li><a href="#" class="link">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="logoutBtn">Logout</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!------------------ Dashboard Content ------------------>
+        <div class="dashboard-container">
+            <header>
+                <h1>Welcome, Student</h1>
+            </header>
+
+            <div class="course-selection">
+                <h2>Select Courses to Enroll</h2>
+                <form id="enrollForm">
+                    <div class="course-list">
+                        <div class="input-box">
+                            <input type="checkbox" id="course1" name="course" value="computer vision">
+                            <label for="course1">computer vision</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="checkbox" id="course2" name="course" value="software engineering">
+                            <label for="course2">software engineering</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="checkbox" id="course3" name="course" value="deep learning">
+                            <label for="course3">deep learning</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="checkbox" id="course4" name="course" value="Natural Language Processing">
+                            <label for="course4">Natural Language Processing</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="checkbox" id="course5" name="course" value="Technical and Business Writing">
+                            <label for="course5">Technical and Business Writing</label>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Enroll">
+                    </div>
+                </form>
+
+                <div class="enrolled-courses">
+                    <h3>Enrolled Courses:</h3>
+                    <ul id="enrolledList">
+                        <!-- Enrolled courses will appear here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+</html>

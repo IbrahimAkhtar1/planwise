@@ -1,0 +1,261 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("image2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(39, 39, 39, 0.8);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: rgba(39, 39, 39, 0.9);
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.nav-logo img.logo-img {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.link:hover, .active {
+    color: #ff5722; /* Accent color for hover/active link */
+    border-bottom: 3px solid #ff5722;
+}
+
+.nav-button .btn {
+    width: 120px;
+    height: 40px;
+    font-weight: 600;
+    background: #ff5722;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 800px;
+    padding: 60px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course-selection {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(39, 39, 39, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.course-selection h2 {
+    color: #ff5722;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    position: relative;
+    background: #333;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-box input[type="checkbox"] {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    margin: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.input-box label {
+    font-size: 16px;
+    padding-left: 40px;
+    color: #fff;
+}
+
+.submit {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    background: #ff5722;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit:hover {
+    background: #e64a19;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.enrolled-courses {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.enrolled-courses h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.enrolled-courses ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enrolled-courses ul li {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu.responsive {
+        top: 80px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(39, 39, 39, 0.9);
+        width: 100%;
+        height: 100vh;
+        transition: top 0.3s ease;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-menu-btn i {
+        font-size: 30px;
+        color: #fff;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .nav-menu-btn i:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .dashboard-container {
+        padding: 40px 10px;
+    }
+
+    .course-selection {
+        padding: 15px;
+    }
+
+    .submit {
+        font-size: 14px;
+        height: 40px;
+    }
+}
