@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>PlanWise| Login & Registration</title>
+    <title>PlanWise | Login & Registration</title>
 </head>
 <body>
  <div class="wrapper">
@@ -23,8 +23,8 @@
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            <button class="btn white-btn" id="loginBtn">Sign In</button>
+            <button class="btn" id="registerBtn">Sign Up</button>
         </div>
         <div class="nav-menu-btn">
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
@@ -38,7 +38,7 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <span>Don't have an account? <a href="#" id="signUpLink">Sign Up</a></span>
                 <header>Login</header>
             </div>
             <div class="input-box">
@@ -50,7 +50,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="button" class="submit" value="Sign In" onclick="loginUser()">
+                <input type="button" class="submit" value="Sign In">
             </div>
             <div class="two-col">
                 <div class="one">
@@ -64,9 +64,10 @@
         </div>
 
         <!------------------- registration form -------------------------->
+
         <div class="register-container" id="register">
             <div class="top">
-                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <span>Have an account? <a href="#" id="loginLink">Login</a></span>
                 <header>Sign Up</header>
             </div>
             <div class="two-forms">
@@ -88,7 +89,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="button" class="submit" value="Register" onclick="registerUser()">
+                <input type="button" class="submit" value="Register">
             </div>
             <div class="two-col">
                 <div class="one">
@@ -108,13 +109,9 @@
     function login() {
         var loginContainer = document.getElementById("login");
         var registerContainer = document.getElementById("register");
-        var loginBtn = document.getElementById("loginBtn");
-        var registerBtn = document.getElementById("registerBtn");
 
         loginContainer.style.left = "4px";
         registerContainer.style.right = "-520px";
-        loginBtn.className += " white-btn";
-        registerBtn.className = "btn";
         loginContainer.style.opacity = 1;
         registerContainer.style.opacity = 0;
     }
@@ -122,13 +119,9 @@
     function register() {
         var loginContainer = document.getElementById("login");
         var registerContainer = document.getElementById("register");
-        var loginBtn = document.getElementById("loginBtn");
-        var registerBtn = document.getElementById("registerBtn");
 
         loginContainer.style.left = "-510px";
         registerContainer.style.right = "5px";
-        loginBtn.className = "btn";
-        registerBtn.className += " white-btn";
         loginContainer.style.opacity = 0;
         registerContainer.style.opacity = 1;
     }
@@ -178,7 +171,7 @@
             });
 
             if (user) {
-            alert("Login Sucessful")
+                alert("Login successful!");
 
                 // Save logged-in user data in localStorage
                 localStorage.setItem('loggedInUser', JSON.stringify(user));
@@ -212,6 +205,8 @@
     document.getElementById("loginBtn").addEventListener("click", login);
     document.querySelector('.login-container .submit').addEventListener('click', loginUser);
     document.querySelector('.register-container .submit').addEventListener('click', registerUser);
+    document.getElementById("signUpLink").addEventListener("click", register);
+    document.getElementById("loginLink").addEventListener("click", login);
 </script>
 </body>
 </html>
