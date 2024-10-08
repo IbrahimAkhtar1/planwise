@@ -63,15 +63,15 @@ body {
 }
 
 .link:hover, .active {
-    color: #ff5722; /* Accent color for hover/active link */
-    border-bottom: 3px solid #ff5722;
+    color: #4da6ff; /* Light blue color for hover/active link */
+    border-bottom: 3px solid #4da6ff;
 }
 
 .nav-button .btn {
     width: 120px;
     height: 40px;
     font-weight: 600;
-    background: #ff5722;
+    background: #4da6ff;
     border: none;
     border-radius: 20px;
     color: #fff;
@@ -80,7 +80,7 @@ body {
 }
 
 .btn:hover {
-    background: #e64a19;
+    background: #1a73e8;
     transform: scale(1.05);
 }
 
@@ -116,7 +116,7 @@ header {
 }
 
 .course-selection h2 {
-    color: #ff5722;
+    color: #4da6ff;
     text-align: center;
     font-weight: 700;
     margin-bottom: 20px;
@@ -160,14 +160,14 @@ header {
     width: 100%;
     border: none;
     border-radius: 25px;
-    background: #ff5722;
+    background: #4da6ff;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     margin-top: 20px;
 }
 
 .submit:hover {
-    background: #e64a19;
+    background: #1a73e8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -179,7 +179,7 @@ header {
 .enrolled-courses h3 {
     font-size: 24px;
     font-weight: 600;
-    color: #ff5722;
+    color: #4da6ff;
     margin-bottom: 15px;
 }
 
@@ -232,7 +232,7 @@ header {
 
     .nav-menu-btn i {
         font-size: 30px;
-        color: #fff;
+        color: #ffffff;
         padding: 12px;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
